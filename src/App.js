@@ -1,23 +1,40 @@
-import logo from './logo.svg';
+
+import { useState } from 'react';
 import './App.css';
 
 function App() {
+  const [name, setName] = useState("")
+  const [age, setAge] = useState("")
+  const [users, setUsers]=useState([])
+
+  const handleNameChange = (event)=>{
+    setName(event.target.value)
+  }
+  const handleAgeChange = (event) => {
+    setAge(event.target.value);
+  };
+  const handleAddUser = () => {
+    const newUser = {
+      name: name,
+      age: age
+    };
+    setUsers([...users, newUser]);
+    setName('');
+    setAge('');
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <input type="text" placeholder='Name' value={name} onChange={handleNameChange}/>
+      <input type="number" placeholder='Age' value={age} onChange={handleAgeChange}/>
+      <button type='submit' onClick={handleAddUser}>Add User</button>
+      
+      <ul>
+        {users.map((user, index) => (
+          <li key={index}>
+            Name: {user.name}, Age: {user.age}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
