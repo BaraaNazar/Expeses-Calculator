@@ -1,14 +1,16 @@
 import React from 'react'
-import ExpenseItem from '../ExpenseItem/ExpenseItem'
+import ExpenseItem from '../../../components/Expenses/ExpenseItem/ExpenseItem'
+import Card from '../../../components/UI/Card/Card'
+import "./style.css"
 
 function AllExpeseItems(props) {
   return (
-    <div className='expenses'>
+    <Card className="expenses">
     {props.expenses.map((item)=>{
       return <ExpenseItem key={item.id} title={item.title} price={item.amount} date={item.date}/>
     })
     }
-  </div>
+  </Card>
   )
 }
 

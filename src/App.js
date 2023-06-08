@@ -1,5 +1,5 @@
-import ExpenseForm from '../src/components/ExpenseForm/ExpenseForm.jsx';
-import AllExpeseItems from './components/AllExpeseItems/AllExpeseItems.jsx';
+import ExpenseForm from '../src/components/Expenses/ExpenseForm/ExpenseForm.jsx';
+import AllExpeseItems from './components/Expenses/AllExpeseItems/AllExpeseItems.jsx';
 import { expenses } from './assets/expenses.js';
 
 function App() {
