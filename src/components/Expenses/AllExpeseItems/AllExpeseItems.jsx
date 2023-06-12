@@ -6,7 +6,7 @@ import "./style.css"
 function AllExpeseItems(props) {
   return (
     <Card className="expenses">
-    {props.expenses.map((item)=>{
+    {props.items.map((item)=>{
       return <ExpenseItem key={item.id} title={item.title} price={item.amount} date={item.date}/>
     })
     }
