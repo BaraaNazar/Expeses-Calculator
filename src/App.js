@@ -1,23 +1,16 @@
-import React,{useState} from 'react';
-import AllExpeseItems from './components/Expenses/AllExpeseItems/AllExpeseItems.jsx';
-import { expenses } from './assets/expenses.js';
-import Navbar from './components/Navbar/Navbar.jsx';
-import NewExpense from './components/Expenses/ExpenseForm/NewExpense.jsx';
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Login from './components/Login/Login.jsx';
+import SignUp from './components/SignUp/SignUp.jsx';
+import Home from './Pages/Home.js';
 
 function App() {
-  const [expenseItems, setExpenseItems] = useState(expenses);
-  const addExpesneHandler=(expense)=>{
-    console.log("in app.js file")
-    console.log(expense)
-    setExpenseItems((prevExpenseItems) => [expense, ...prevExpenseItems]);
-  }
-
   return (
-    <div className="App">
-      <Navbar/>
-      <NewExpense addExpesneHandler={addExpesneHandler}/>
-      <AllExpeseItems items={expenseItems} />
-    </div>
+    <Routes>
+      <Route path='/Login' element={<Login />} />
+      <Route path='/SignUp' element={<SignUp />} />
+      <Route path='/' element={<Home />} />
+    </Routes>
   );
 }
 
