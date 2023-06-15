@@ -14,7 +14,7 @@ function Home() {
   return (
     <div>
       <Navbar />
-      <NewExpense addExpenseHandler={addExpenseHandler} />
+      <NewExpense addExpense={addExpenseHandler} />
       <AllExpeseItems items={expenseItems} />
     </div>
   );
