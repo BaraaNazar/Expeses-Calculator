@@ -59,7 +59,7 @@ function ExpenseForm(props) {
           <button
             type='submit'
             onClick={submitHandler}
-            class='button-50 new-expense_button'
+            className='button-50 new-expense_button'
           >
             Add Expense
           </button>

@@ -1,12 +1,17 @@
-import React from 'react'
-import "./style.css"
+import React from 'react';
+import './style.css';
 
-function InputExpense({handleNameChange}) {
+function InputExpense({ handleNameChange }) {
   return (
     <div>
-  <input type="text" class="input" placeholder="Title" onChange={handleNameChange}/>
+      <input
+        type='text'
+        className='input'
+        placeholder='Title'
+        onChange={handleNameChange}
+      />
     </div>
-  )
+  );
 }
 
-export default InputExpense
+export default InputExpense;
