@@ -7,8 +7,6 @@ import Navbar from '../components/Navbar/Navbar.jsx';
 function Home() {
   const [expenseItems, setExpenseItems] = useState(expenses);
   const addExpenseHandler = (expense) => {
-    console.log('in app.js file');
-    console.log(expense);
     setExpenseItems((prevExpenseItems) => [expense, ...prevExpenseItems]);
   };
   return (
