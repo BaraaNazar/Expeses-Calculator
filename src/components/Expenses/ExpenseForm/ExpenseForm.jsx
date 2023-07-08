@@ -2,7 +2,6 @@ import React from 'react';
 import { useState } from 'react';
 import ExpenseFormInput from './ExpenseFormInput';
 import './style.css';
-import AddExpenseButton from './AddExpenseButton';
 
 function ExpenseForm(props) {
   const [showForm, setShowForm] = useState(true);
@@ -23,6 +22,7 @@ function ExpenseForm(props) {
   };
 
   const submitHandler = (event) => {
+    setShowForm(!showForm);
     event.preventDefault();
     const expenseData = {
       title: title,

@@ -1,6 +1,5 @@
 import React from 'react';
 import ExpenseForm from './ExpenseForm';
-import AddExpenseButton from './AddExpenseButton';
 
 function NewExpense(props) {
   const saveExpenseDataHandler = (enteredExpenseData) => {
