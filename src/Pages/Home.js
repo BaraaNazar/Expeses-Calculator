@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import NewExpense from '../components/Expenses/ExpenseForm/NewExpense.jsx';
-import AllExpeseItems from '../components/Expenses/AllExpeseItems/AllExpeseItems.jsx';
 import { expenses } from '../assets/expenses';
 import Navbar from '../components/Navbar/Navbar.jsx';
+import Expenses from '../components/Expenses/Expenses/Expenses.jsx';
 
 function Home() {
   const [expenseItems, setExpenseItems] = useState(expenses);
@@ -13,7 +13,7 @@ function Home() {
     <div>
       <Navbar />
       <NewExpense addExpense={addExpenseHandler} />
-      <AllExpeseItems items={expenseItems} />
+      <Expenses items={expenseItems} />
     </div>
   );
 }
